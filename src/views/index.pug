@@ -1,0 +1,15 @@
+extends ./extends/layout
+
+block variables
+	- var title = 'Is It Up?'
+
+block content
+	.container
+		.heading
+			form(action='/check', method='post')
+				.left
+					label Is
+					input#url.url-form(type='text', name='url', placeholder='google.com', required='')
+					br
+				.right
+					label up?

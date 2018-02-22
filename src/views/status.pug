@@ -1,0 +1,13 @@
+extends ./extends/layout
+
+block variables
+	- var title = 'Is It Up?'
+
+block content
+	.container
+			.heading
+				h2
+					a(href='{{SITE_LINK}}') {{SITE}}
+					| {{STATUS}}
+			.center
+				a(href='/') ⟵ Back

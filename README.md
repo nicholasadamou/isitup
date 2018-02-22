@@ -49,7 +49,8 @@ $ yarn start
 You can then access the service by navigating to [`localhost:3000`](http://localhost:3000/).
 
 ## Credits
-- isitup is basically a remake of [isitup.org](https://github.com/sjparkinson/isitup.org) & [downforeveryoneorjustme.com](http://downforeveryoneorjustme.com) in Node.js, using Express. 
+- isitup is basically a remake of [isitup.org](https://github.com/sjparkinson/isitup.org) & [downforeveryoneorjustme.com](http://downforeveryoneorjustme.com) in Node.js, using Express.
+- isitup is a gulp, sass, pug port of [k4m4](http://github.com/k4m4)'s [isitup.now](http://github.com/k4m4) Node.js Express app.
 
 ## License
 

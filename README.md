@@ -15,7 +15,6 @@
 - [Node.js](https://nodejs.org/en/)
 - [Gulp](http://gulpjs.com)
 - [Yarn](https://yarnpkg.com/en/docs/install)
-- [Bower](https://bower.io/)
 - [localtunnel](https://github.com/localtunnel/localtunnel)
 
 ```bash

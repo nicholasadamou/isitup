@@ -13,8 +13,8 @@
 ## Requirements
 
 - [Node.js](https://nodejs.org/en/)
-- [Gulp](http://gulpjs.com)
 - [Yarn](https://yarnpkg.com/en/docs/install)
+- [Gulp](http://gulpjs.com)
 - [localtunnel](https://github.com/localtunnel/localtunnel)
 
 ```bash

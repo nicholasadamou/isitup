@@ -8,7 +8,7 @@
 [About](#about) / [Requirements](#requirements) / [Installation](#installation) / [Credits](#credits) / [License](#license)
 
 ## About
-'Is it up?' is a simple web application to check whether a site is 🆙 or broken.
+`isitup` is a simple web application to check whether a site is 🆙 or broken.
 
 ## Requirements
 

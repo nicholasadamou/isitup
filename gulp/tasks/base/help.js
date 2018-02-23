@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 
 gulp.task('help', () => {
     console.log('');
-    console.log("===== Help for 'is it up' express app =====");
+    console.log("===== Help for '" + config.pkg.name + "' =====");
     console.log('');
     console.log('Usage: gulp [command]');
     console.log('The commands for the task runner are the following.');

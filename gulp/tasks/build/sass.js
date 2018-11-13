@@ -26,19 +26,7 @@ gulp.task('sass', function() {
     plugins = [
         lost(),
         rucksack(),
-        autoprefixer({
-            browsers: [
-                '> 1%',
-                'last 2 versions',
-                'firefox >= 4',
-                'safari 7',
-                'safari 8',
-                'IE 8',
-                'IE 9',
-                'IE 10',
-                'IE 11'
-            ],
-        }),
+        autoprefixer(),
 	];
 
 	console.log('-> Compiling SASS for ' + config.environment);
@@ -55,7 +43,7 @@ gulp.task('sass', function() {
 		// Add vendor prefixes
 		.pipe($.postcss(plugins))
 		// save sourcemaps
-		.pipe($.sourcemaps.write(paths.to.sass.out))
+		.pipe($.sourcemaps.write('.'))
 		// Save unminified file
 		.pipe(gulp.dest(`${paths.to.sass.out}`))
 	} else {

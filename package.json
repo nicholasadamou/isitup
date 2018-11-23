@@ -21,7 +21,7 @@
     "gulp": "^3.9.1",
     "helmet": "^3.11.0",
     "is-up": "^2.0.0",
-    "validator": "^9.4.1"
+    "validator": "^10.9.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",

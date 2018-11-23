@@ -20,8 +20,8 @@
     "express-session": "^1.15.6",
     "gulp": "^3.9.1",
     "helmet": "^3.11.0",
-    "is-up": "^3.0.0",
-    "validator": "^9.4.1"
+    "is-up": "^2.0.0",
+    "validator": "^10.9.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",

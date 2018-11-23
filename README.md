@@ -3,6 +3,9 @@
 ![project preview](isitup.png)
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
+[![DevDependencies](https://img.shields.io/david/dev/nicholasadamou/isitup.svg?style=flat-square)](https://david-dm.org/nicholasadamou/isitup#info=devDependencies)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nicholasadamou/isitup)](https://dependabot.com)
+[![Known Vulnerabilities](https://snyk.io/test/github/nicholasadamou/isitup/badge.svg?targetFile=package.json)](https://snyk.io/test/github/nicholasadamou/isitup?targetFile=package.json)
 [![Say Thanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/NicholasAdamou)
 
 [About](#about) / [Requirements](#requirements) / [Installation](#installation) / [Credits](#credits) / [License](#license)

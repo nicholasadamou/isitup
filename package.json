@@ -24,7 +24,7 @@
     "validator": "^9.4.1"
   },
   "devDependencies": {
-    "autoprefixer": "^8.0.0",
+    "autoprefixer": "^9.3.1",
     "browser-sync": "^2.23.6",
     "del": "^3.0.0",
     "gulp-changed": "^3.2.0",

@@ -13,19 +13,6 @@
 
 `isitup` is a simple web application to check whether a site is 🆙 or broken.
 
-## Requirements
-
--   [Node.js](https://nodejs.org/en/)
--   [Yarn](https://yarnpkg.com/en/docs/install)
--   [Gulp](http://gulpjs.com)
--   [localtunnel](https://github.com/localtunnel/localtunnel)
-
-```bash
-$ npm install -g yarn bower gulp localtunnel
-```
-
-**Note**: **(`Windows` Users)** In order for **`localtunnel`** to work properly, please configure `Windows Firewall` to _allow_ `port 3000, 3001` to _allow_ **in-bound** and **out-bound** connections (`port 3000, 3001` is **Browsersync**'s default port allocation). For _Security_ reasons, only _allow_ **in-bound** and **out-bound** connections on `port 3000, 3001` on your home network.
-
 ## Installation
 
 Clone the repository and install all dependencies by running:

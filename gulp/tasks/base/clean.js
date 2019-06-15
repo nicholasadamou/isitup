@@ -1,15 +1,26 @@
-'use-strict';
+'use-strict'
 
-var gulp = require('gulp'),
-    $ = require('gulp-load-plugins')({ lazy: true }),
-    del = require('del');
+const gulp = require('gulp')
 
-var paths = require('../../paths.js');
+const del = require('del')
 
-gulp.task('clean', function() {
-    console.log('-> Cleansing compiled files');
+const paths = require('../../paths.js')
 
-    del.sync([
-        paths.to.build + "*"
-    ]);
-});
+gulp.task('clean:build', () => {
+  console.log('-> Cleansing compiled files')
+
+  return del([
+    `${paths.to.build}*`
+  ])
+})
+
+// Since we use 'gulp-inline-source' within
+// the 'pug' task, we can delete the compiled
+// 'sass' & 'js' files from the below directories.
+gulp.task('clean:compiled-files', () => {
+  console.log(`-> Cleansing compiled 'sass' files`)
+
+  return del([
+    `${paths.to.sass.out}`,
+  ])
+})

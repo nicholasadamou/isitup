@@ -1,53 +1,68 @@
 {
-  "name": "isitup",
-  "version": "1.0.0",
-  "description": "Minimal service to check whether a site is up or broken.",
-  "main": "index.js",
-  "scripts": {
-    "start": "gulp build && node index.js",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
-  },
-  "keywords": [
-    "status",
-    "isitup"
-  ],
-  "author": "Nicholas Adamou",
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "dotenv": "^8.0.0",
-    "express": "^4.16.2",
-    "express-sanitizer": "^1.0.3",
-    "express-session": "^1.15.6",
-    "gulp": "^4.0.0",
-    "helmet": "^3.11.0",
-    "is-up": "^2.0.0",
-    "validator": "^11.0.0",
-    "snyk": "^1.110.2"
-  },
-  "devDependencies": {
-    "autoprefixer": "^9.3.1",
-    "browser-sync": "^2.23.6",
-    "del": "^4.0.0",
-    "gulp-changed": "^4.0.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-error-handle": "^1.0.0",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-include": "^2.3.1",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.0.2",
-    "gulp-size": "^3.0.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "lost": "^8.2.0",
-    "node-bourbon": "^4.2.8",
-    "node-neat": "^2.0.0-beta.0",
-    "require-dir": "^1.0.0",
-    "rucksack-css": "^1.0.2"
-  },
-  "snyk": true
+	"name": "isitup",
+	"title": "isitup",
+	"description": "Minimal service to check whether a site is up or broken.",
+	"version": "1.0.0",
+	"homepage": "https://nicholasadamou.com/",
+	"author": {
+		"name": "Nicholas Adamou",
+		"url": "https://nicholasadamou.com/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:nicholasadamou/isitup.git"
+	},
+	"main": "index.js",
+	"scripts": {
+		"build": "gulp build",
+		"start": "gulp build && node index.js",
+		"snyk-protect": "snyk protect",
+		"prepare": "npm run snyk-protect"
+	},
+	"keywords": [
+		"status",
+		"isitup"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"body-parser": "^1.18.2",
+		"dotenv": "^8.0.0",
+		"express": "^4.16.2",
+		"express-sanitizer": "^1.0.3",
+		"express-session": "^1.15.6",
+		"gulp": "^4.0.0",
+		"helmet": "^3.11.0",
+		"is-up": "^2.0.0",
+		"moment": "^2.22.2",
+		"validator": "^11.0.0",
+		"snyk": "^1.110.2"
+	},
+	"devDependencies": {
+		"autoprefixer": "^9.3.1",
+		"browser-sync": "^2.23.6",
+		"del": "^4.0.0",
+		"gulp-changed": "^4.0.0",
+		"gulp-cssnano": "^2.1.2",
+		"gulp-error-handle": "^1.0.0",
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-header": "^2.0.7",
+		"gulp-include": "^2.3.1",
+		"gulp-load-plugins": "^1.5.0",
+		"gulp-notify": "^3.2.0",
+		"gulp-plumber": "^1.2.0",
+		"gulp-postcss": "^8.0.0",
+		"gulp-pug": "^3.3.0",
+		"gulp-rename": "^1.2.2",
+		"gulp-sass": "^4.0.2",
+		"gulp-size": "^3.0.0",
+		"gulp-sourcemaps": "^2.6.4",
+		"lost": "^8.2.0",
+		"node-bourbon": "^4.2.8",
+		"node-neat": "^2.0.0-beta.0",
+		"postcss-preset-env": "^6.4.0",
+		"require-dir": "^1.0.0",
+		"rucksack-css": "^1.0.2",
+		"undertaker-forward-reference": "^1.0.2"
+	},
+	"snyk": true
 }

@@ -6,7 +6,7 @@ var isUp         = require('is-up');
 var validator    = require('validator');
 var sanitizer    = require('express-sanitizer');
 var helmet       = require('helmet');
-var dotenv       = require('dotenv')
+var dotenv       = require('dotenv').config()
 var app          = express();
 
 app.use(bodyParser.json());
@@ -20,7 +20,6 @@ app.use(express.static("public"));
 app.disable('x-powered-by')
 app.use(sanitizer())
 app.use(helmet());
-dotenv.load();
 app.use(session({
     secret: process.env.SECRET,
     cookie: {

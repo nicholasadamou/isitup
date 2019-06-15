@@ -7,7 +7,7 @@
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nicholasadamou/isitup)](https://dependabot.com)
 [![Say Thanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/NicholasAdamou)
 
-[About](#about) / [Requirements](#requirements) / [Installation](#installation) / [Credits](#credits) / [License](#license)
+[About](#about) / [Installation](#installation) / [Credits](#credits) / [License](#license)
 
 ## About
 

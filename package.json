@@ -36,7 +36,7 @@
     "is-up": "^2.0.0",
     "moment": "^2.22.2",
     "validator": "^11.0.0",
-    "snyk": "^1.189.0"
+    "snyk": "^1.231.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",

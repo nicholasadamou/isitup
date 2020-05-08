@@ -43,6 +43,6 @@ You can then access the service by navigating to [`localhost:3000`](http://local
 
 ## License
 
-Copyright (c) 2018 by Nicholas Adamou. Some rights reserved.
+Copyright (c) by Nicholas Adamou. Some rights reserved.
 
 `isitup` is under the terms of the **MIT License**, following all clarifications stated in the [license file](license.md).

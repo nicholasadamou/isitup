@@ -1,13 +1,14 @@
-var express      = require('express');
-var bodyParser   = require('body-parser');
-var fs           = require('fs');
-var session      = require('express-session');
-var isUp         = require('is-up');
-var validator    = require('validator');
-var sanitizer    = require('express-sanitizer');
-var helmet       = require('helmet');
-var dotenv       = require('dotenv')
-var app          = express();
+const express      = require('express');
+const bodyParser   = require('body-parser');
+const fs           = require('fs');
+const path		   = require('path')
+const session      = require('express-session');
+const isUp         = require('is-up');
+const validator    = require('validator');
+const sanitizer    = require('express-sanitizer');
+const helmet       = require('helmet');
+const dotenv       = require('dotenv')
+const app          = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -37,26 +38,30 @@ app.get('/', function(req, res) {
 });
 
 app.post('/check', function(req, res, next) {
-    site = validator.escape(req.sanitize(req.body.url).replace('https://', '').replace('http://', ''));
+    let site = validator.escape(req.sanitize(req.body.url).replace('https://', '').replace('http://', ''));
 
     if (!validator.isURL(site)) {
-        status = 'doesn\'t seem to be a valid url.'
+        const status = 'doesn\'t seem to be a valid url.'
 
         fs.readFile(__dirname + '/public/status.html', function(err, data) {
             if (err) {
                 throw err;
             }
 
-            var html = data.toString();
-            var html = html.replace(/{{SITE_LINK}}/g, site);
-            var html = html.replace(/{{SITE}}/g, site);
-            var html = html.replace(/{{STATUS}}/g, status);
+            let html = data.toString();
+            html = html.replace(/{{SITE_LINK}}/g, site);
+			html = html.replace(/{{SITE}}/g, site);
+            html = html.replace(/{{STATUS}}/g, status);
 
             return res.send(html);
         });
     } else {
+		site = 'https://' + site;
+		
         isUp(site).then(up => {
-            if (up == true) {
+            let status
+			
+			if (up) {
                 status = 'is up!';
             } else {
                 status = 'seems to be down!';
@@ -67,11 +72,10 @@ app.post('/check', function(req, res, next) {
                     throw err;
                 }
     
-                var html = data.toString();
-                var site_link = 'http://' + site;
-                var html = html.replace(/{{SITE_LINK}}/g, site_link);
-                var html = html.replace(/{{SITE}}/g, site);
-                var html = html.replace(/{{STATUS}}/g, status);
+                let html = data.toString();
+                html = html.replace(/{{SITE_LINK}}/g, site);
+				html = html.replace(/{{SITE}}/g, site);
+                html = html.replace(/{{STATUS}}/g, status);
     
                 res.send(html);
             });

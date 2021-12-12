@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  isitup:
+    env_file: ./.env
+    image: nicholasadamou/isitup:latest
+    container_name: isitup
+    ports:
+      - 3000:3000

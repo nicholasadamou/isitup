@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const $ = require('gulp-load-plugins')({ lazy: true })
 
+const sass = require('gulp-sass')(require('node-sass'));
 const autoprefixer = require('autoprefixer')
 const rucksack = require('rucksack-css')
 const bourbon = require('node-bourbon')
@@ -36,11 +37,11 @@ gulp.task('sass', (done) => {
 
   console.log(`-> Compiling SASS for ${config.environment}`)
 
-  let sass = null
+  let styles
 
-  if (env) {
+	if (env) {
     // Select files
-    sass = gulp.src(`${paths.to.sass.in}/*.scss`)
+    styles = gulp.src(`${paths.to.sass.in}/*.scss`)
     // Prevent pipe breaking caused by errors from gulp plugins
       .pipe(
         $.plumber({
@@ -55,7 +56,7 @@ gulp.task('sass', (done) => {
     // Initialize sourcemaps *after* header
       .pipe($.sourcemaps.init())
     // Compile Sass
-      .pipe($.sass(options).on('error', $.sass.logError))
+      .pipe(sass(options).on('error', sass.logError))
     // Add vendor prefixes
       .pipe($.postcss(plugins))
     // Concatenate includes
@@ -72,7 +73,7 @@ gulp.task('sass', (done) => {
       .pipe($.notify({ message: '\n\n✅   ===> SASS completed!\n', onLast: true }))
   } else {
     // Select files
-    sass = gulp.src(`${paths.to.sass.in}/*.scss`)
+    styles = gulp.src(`${paths.to.sass.in}/*.scss`)
     // Prevent pipe breaking caused by errors from gulp plugins
       .pipe(
         $.plumber({
@@ -85,7 +86,7 @@ gulp.task('sass', (done) => {
     // Add file-header
       .pipe($.header(banner.min, { package: config.pkg }))
     // Compile Sass
-      .pipe($.sass(options).on('error', $.sass.logError))
+      .pipe(sass(options).on('error', sass.logError))
     // Add vendor prefixes
       .pipe($.postcss(plugins))
     // Concatenate includes
@@ -110,5 +111,5 @@ gulp.task('sass', (done) => {
       .pipe($.notify({ message: '\n\n✅   ===> SASS completed!\n', onLast: true }))
   }
 
-  return sass
+  return styles
 })

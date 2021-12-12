@@ -33,6 +33,16 @@ Finally, build the project by running:
 yarn start
 ```
 
+If you want to use [`docker`](https://docker.com) then  you can do the follow:
+
+```
+# Make sure you have docker installed before running the below commands.
+# See https://docs.docker.com/get-docker/
+
+make all
+docker-compose up
+```
+
 You can then access the service by navigating to [`localhost:3000`](http://localhost:3000/).
 
 ## Credits

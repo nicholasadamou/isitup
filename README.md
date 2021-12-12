@@ -33,13 +33,13 @@ Finally, build the project by running:
 yarn start
 ```
 
-If you want to use [`docker`](https://docker.com) then  you can do the follow:
+If you want to use [`docker`](https://docker.com) instead then you can do the following:
 
 ```
 # Make sure you have docker installed before running the below commands.
 # See https://docs.docker.com/get-docker/
 
-make all
+make # Will build the docker image using the dockerfile.
 docker-compose up
 ```
 

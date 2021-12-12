@@ -1,4 +1,4 @@
-# Is it up? [![Build Status](https://travis-ci.org/nicholasadamou/isitup.svg?branch=master)](https://travis-ci.org/nicholasadamou/isitup)
+# Is it up?
 
 ![project preview](isitup.png)
 
